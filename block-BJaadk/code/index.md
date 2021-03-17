@@ -4,14 +4,16 @@ For the given code below you have to draw the diagram of how these things are wo
 - using the `![](./img/imagename.png)` add images below each code snippet
 
 ```js
+// forEach
+
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
   alert(num);
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
 
+![fb](./image/foreach.jpg)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -21,6 +23,8 @@ function double(num) {
 let doubleNum = numbers.forEach(double);
 ```
 
+![fb](./image/foreach2.jpg)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
@@ -28,6 +32,10 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+
+![fb](./image/foreach3.jpg)
+
+<!-- map -->
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -37,6 +45,8 @@ function double(num) {
 let doubleNumbers = numbers.map(double);
 ```
 
+![fb](./image/map.jpg)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function addTwo(num) {
@@ -45,6 +55,8 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+![fb](./image/map2.jpg)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function addTwo(num) {
@@ -52,6 +64,8 @@ function addTwo(num) {
 }
 let doubleNumbers = numbers.map(addTwo);
 ```
+
+![fb](./image/map3.jpg)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -61,6 +75,8 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+<!-- Filter -->
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function isOdd(num) {
@@ -68,6 +84,8 @@ function isOdd(num) {
 }
 let oddNumbers = numbers.filter(isOdd);
 ```
+
+![fb](./image/filter.jpg)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -77,6 +95,8 @@ function test(num) {
 let filteredNumbers = numbers.filter(test);
 ```
 
+![fb](./image/filter1.jpg)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function test(num) {
@@ -84,6 +104,8 @@ function test(num) {
 }
 let filteredNumbers = numbers.filter(test);
 ```
+
+<!-- Reduce -->
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
