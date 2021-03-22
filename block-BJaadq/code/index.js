@@ -1,35 +1,84 @@
 // NOTE: You can not use reduce methods to solve this exercise
 
 function countAllPeople() {
-  // your code goes here
+  let result = [];
+  for (let house of got.houses) {
+    for (let person of house.people) {
+      result.push(person);
+    }
+  }
+  return result.length;
 }
 
+// console.log(countAllPeople());
+
 function peopleByHouses() {
-  // your code goes here
+  let final = {};
+  for (let house of got.houses) {
+    final[house.name] = house.people.length;
+  }
+  return final;
 }
 
 function everyone() {
-  // your code goes here
+  let result = [];
+  got.houses.forEach((house) => {
+    let peopleName = house.people.map((v) => v.name);
+    result = result.concat(peopleName);
+  });
+  return result;
 }
 
 function nameWithS() {
-  // your code goes here
+  let result = [];
+  got.houses.forEach((house) => {
+    let peopleName = house.people.filter((v) =>
+      v.name.toLowerCase().includes("s")
+    );
+    result = result.concat(peopleName);
+  });
+  return result;
 }
 
 function nameWithA() {
-  // your code goes here
+  let result = [];
+  got.houses.forEach((house) => {
+    let peopleName = house.people.filter((v) =>
+      v.name.toLowerCase().includes("a")
+    );
+    result = result.concat(peopleName);
+  });
+  return result;
 }
 
 function surnameWithS() {
-  // your code goes here
+  let result = [];
+  got.houses.forEach((house) => {
+    let peopleName = house.people.filter((v) =>
+      v.name.split(" ")[1].toLowerCase().includes("s")
+    );
+    result = result.concat(peopleName);
+  });
+  return result;
 }
 
 function surnameWithA() {
-  // your code goes here
+  let result = [];
+  got.houses.forEach((house) => {
+    let peopleName = house.people.filter((v) =>
+      v.name.split(" ")[1].toLowerCase().includes("A")
+    );
+    result = result.concat(peopleName);
+  });
+  return result;
 }
 
 function peopleNameOfAllHouses() {
-  // your code goes here
+  let final = {};
+  for (let house of got.houses) {
+    final[house.name] = house.people.map((v) => v.name);
+  }
+  return final;
 }
 
 // Testing your result after writing your function
@@ -44,7 +93,7 @@ console.log(everyone());
 // Output should be
 //["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "King Robert Baratheon", "Stannis Baratheon", "Renly Baratheon", "Joffrey Baratheon", "Tommen Baratheon", "Myrcella Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Balon Greyjoy", "Theon Greyjoy", "Yara Greyjoy", "Margaery (Tyrell) Baratheon", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn", "Edmure Tully", "Brynden Tully", "Olenna (Redwyne) Tyrell", "Walder Frey", "Jon Arryn", "Khal Drogo"]
 
-console.log(nameWithS(), 'with s');
+console.log(nameWithS(), "with s");
 // Output should be
 // ["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "Stannis Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn"]
 
@@ -52,7 +101,7 @@ console.log(nameWithA());
 // Output should be
 // ["Eddard Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon Stark", "Rickon Stark", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Cersei Baratheon", "Robert Baratheon", "Stannis Baratheon", "Renly Baratheon", "Joffrey Baratheon", "Tommen Baratheon", "Myrcella Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Balon Greyjoy", "Yara Greyjoy", "Margaery Baratheon", "Loras Tyrell", "Catelyn Stark", "Lysa Arryn", "Olenna Tyrell", "Walder Frey", "Jon Arryn", "Khal Drogo"]
 
-console.log(surnameWithS(), 'surname with s');
+console.log(surnameWithS(), "surname with s");
 // Output should be
 // ["Eddard Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon Stark", "Rickon Stark", "Jon Snow", "Catelyn Stark"]
 
