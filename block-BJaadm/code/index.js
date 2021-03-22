@@ -72,20 +72,37 @@ let malePersons = persons.filter((person) => person.sex === "M");
 console.log(malePersons);
 
 // Find the sum of all grades and store in gradeTotal
-
+let gradeTotal = peopleGrade.reduce((a, b) => a + b, 0);
 // Find the average grade
+let gradeTotal = peopleGrade.reduce((a, b) => a + b, 0) / peopleGrade.length;
 
 // Find the average grade of male
+let maleGrade = persons.filter((p) => p.sex == "M");
+maleGrade.reduce((acc, cv) => {
+  return acc + cv.grade;
+}, 0) / maleGrade.length;
 
 // Find the average grade of female
+let femaleGrade = persons.filter((p) => p.sex == "F");
+femaleGrade.reduce((acc, cv) => {
+  return acc + cv.grade;
+}, 0) / femaleGrade.length;
 
 // Find the highest grade
+[...peopleGrade].sort((a, b) => a - b).pop();
 
 // Find the highest grade in male
+[...avgFemaleGrade].sort((a, b) => a - b).pop();
 
 // Find the highest grade in female
+[...femaleGrade].sort((a, b) => a - b).pop();
 
 // Find the highest grade for people whose name starts with 'J' or 'P'
+let personWithJorP = persons.filter(
+  (v) => v.name.startsWith("J") || v.name.startsWith("P")
+);
+let gradeOfJorP = personWithJorP.map((v) => v.grade);
+[...gradeOfJorP].sort((a, b) => a - b).pop();
 
 // Sort the peopleGrade in ascending order and log the value of peopleGrade. Notice did the elements of peopleGrade got changed?
 peopleGrade.sort((a, b) => a - b);
